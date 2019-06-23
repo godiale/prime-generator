@@ -23,5 +23,8 @@ class PrimeGeneratorTest {
         assertEquals(3, PrimeGenerator.findNextPrime(createList(2)));
         assertEquals(5, PrimeGenerator.findNextPrime(createList(2, 3)));
         assertEquals(7, PrimeGenerator.findNextPrime(createList(2, 3, 5)));
+        assertEquals(7, PrimeGenerator.findNextPrime(createList(2, 3, 5)));
+        assertEquals(11, PrimeGenerator.findNextPrime(createList(2, 3, 5, 7)));
+        assertEquals(13, PrimeGenerator.findNextPrime(createList(2, 3, 5, 7, 11)));
     }
 }

@@ -28,8 +28,13 @@ public class PrimeGenerator {
 
     public static void main(String[] args) {
         List<Long> primesList = new ArrayList<>();
-        long prime = findNextPrime(primesList);
-        primesList.add(prime);
-        primesList.stream().forEach(System.out::println);
+        for (int i=1; i <= 100000; i++) {
+            long prime = findNextPrime(primesList);
+            primesList.add(prime);
+            System.out.print(Long.toString(prime) + ",");
+            if (i % 20 == 0) {
+                System.out.println("");
+            }
+        }
     }
 }
